@@ -21,7 +21,7 @@ const (
 var (
 	A        int
 	x, y     = 0, 0
-	k, i     = 1, 0
+	i        = 0
 	b, b2    = make([]byte, 1), make([]byte, 1)
 	d, d2    byte
 	czy_goto bool
@@ -151,7 +151,7 @@ func game() {
 	//definicja planszy do gry-------------------------------------------
 poczatek_gry:
 	x, y = 0, 0 //jezeli znowu zaczynasz, to wyzeruj swoja pozycje po ostatniej grze
-	k, i = 1, 0
+	i = 0
 
 	fmt.Println("\n autor:Witold Surówka\n Zasady gry:\n -zdefiniuj wielkość planszy,\n -startujesz w lewym dolnym rogu,\n -celem jest dostać się w górny prawy róg,\n -używaj jako strzałek WASD,\n -GL&HF.\n\n")
 	fmt.Println("zdefinuj rozmiar planszy AxA (A_min=1, A_max=30)\n podaj A= ")
@@ -183,9 +183,9 @@ podaj:
 	//pierwsze drukowanie matrixa - do startu----------------------------
 
 	//pętla gry---------------------------------------------------------------------------
-	for k < 2 {
+	for { //petla w nieskonczonosc
 
-		if k == A {
+		if A == 1 { //jezeli plansza trywialna
 			goto Koniec_gry_wygrana
 		}
 
