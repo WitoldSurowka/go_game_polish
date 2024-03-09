@@ -18,5 +18,4 @@ You can decide whether to quit or continue playing.
 This game is notable for its automatic input of the WASD controls that are pressed.
 It's designed for the Windows console.
 
-
-
+Disclaimer: The purpose of this implementation is to use as many GoLang native library features as possible. Normally, this game would be realized utilizing OOP.
